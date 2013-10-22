@@ -678,7 +678,8 @@ namespace log4net.Appender
                             .Replace(":", "_")
                             .Replace("/", "_");
 
-                    m_mutex = new Mutex(false, mutextFriendlyFilename); 
+                    m_mutex = new Mutex(false, mutextFriendlyFilename);
+				    m_mutexClosed = false;
                 }
                 catch (Exception e1)
                 {
